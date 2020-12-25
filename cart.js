@@ -20,5 +20,9 @@ let itemsArray = [
   },
 ];
 
-function addItemIntoCartHandler(productId) {}
-function removeItemIntoCartHandler(productId) {}
+function addItemIntoCartHandler(productId) {
+  cartData.cartItem.push(itemsArray[productId]);
+}
+function removeItemIntoCartHandler(productId) {
+  cartData.cartItem = cartData.cartItem.filter((e) => e.id != productId);
+}
